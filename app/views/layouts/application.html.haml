@@ -1,0 +1,38 @@
+!!! XML
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title BoxCheckIn
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application" 
+    = csrf_meta_tag
+    %meta{:content=>"width=device-width, initial-scale=1.0",:name=>"viewport"}
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "/"} BoxCheckIn
+    .container
+      - if !flash.empty?
+        .row.flashes
+          .span6.offset3
+            - flash.each do |key, value|
+              .alert
+                %a.close(data-dismiss="alert"){:href => "#"} x
+                =value
+      .span12
+        = yield
+    - if ENV["RAILS_ENV"] == "development"
+      %footer
+        .debug
+          .params= debug params
+          .session= debug session
+    -#:javascript
+    -#  var _gaq=[["_setAccount","#{GOOGLE_CODE}"],["_trackPageview"],["_trackPageLoadTime"]];
+    -#  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    -#  g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    -#  s.parentNode.insertBefore(g,s)}(document,"script"));
