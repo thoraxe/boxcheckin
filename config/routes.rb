@@ -1,5 +1,14 @@
 Boxcheckin::Application.routes.draw do
+  namespace :admins do
+    match 'index'
+  end
+
   devise_for :admins
+  as :admin do
+    get 'admins', :to => 'admins#index', :as => :admin_root
+  end
+
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
