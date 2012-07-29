@@ -25,8 +25,7 @@
               .alert
                 %a.close(data-dismiss="alert"){:href => "#"} x
                 =value
-      .span12
-        = yield
+      = yield
     - if ENV["RAILS_ENV"] == "development"
       %footer
         .debug
