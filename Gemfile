@@ -3,8 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'haml', '3.1.3'
 
-gem 'devise', '1.4.9'
-gem 'bcrypt-ruby', '3.0.1'
+gem 'devise', '2.1.2'
 
 gem 'simple_form', '2.0.2'
 gem 'twitter-bootstrap-rails', '2.1.1'
