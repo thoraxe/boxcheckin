@@ -1,4 +1,10 @@
 Boxcheckin::Application.routes.draw do
+  devise_for :gyms, :skip => [:registrations]
+  as :gym do
+    get 'gyms/edit' => 'devise/registrations#edit', :as => 'edit_gym_registration'
+    put 'gyms' => 'devise/registrations#update', :as => 'gym_registration'
+  end
+
   namespace :admins do
     match 'index'
   end
