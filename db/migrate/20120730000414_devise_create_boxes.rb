@@ -1,6 +1,6 @@
-class DeviseCreateGyms < ActiveRecord::Migration
+class DeviseCreateBoxes < ActiveRecord::Migration
   def change
-    create_table(:gyms) do |t|
+    create_table(:boxes) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
@@ -36,20 +36,20 @@ class DeviseCreateGyms < ActiveRecord::Migration
 
       t.timestamps
 
+      # geo
       t.string :name, :null => false
       t.string :address_1, :null => false
       t.string :address_2
-      t.string :city
-      t.string :state
-      t.string :zip
-      t.string :phone
+      t.string :city, :null => false
+      t.string :state, :null => false
+      t.string :zip, :null => false
+      t.string :phone, :null => false
     end
 
-    add_index :gyms, :email,                :unique => true
-    add_index :gyms, :reset_password_token, :unique => true
-    add_index :gyms, :name, :unique => true
-    # add_index :gyms, :confirmation_token,   :unique => true
-    # add_index :gyms, :unlock_token,         :unique => true
-    # add_index :gyms, :authentication_token, :unique => true
+    add_index :boxes, :email,                :unique => true
+    add_index :boxes, :reset_password_token, :unique => true
+    # add_index :boxes, :confirmation_token,   :unique => true
+    # add_index :boxes, :unlock_token,         :unique => true
+    # add_index :boxes, :authentication_token, :unique => true
   end
 end
