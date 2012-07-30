@@ -1,0 +1,22 @@
+%section#global
+  .page-header
+    %h1 Add New Box
+    %p Fill out the Box's details below
+.row
+  .span12
+    = simple_form_for(@box, :as => :box, :url => admins_box_path, :method => :put) do |f|
+      .form-inputs
+        .row
+          .span6
+            = f.input :name
+            = f.input :email
+            = f.input :phone, :label => "Phone"
+          .span6
+            = f.input :address_1, :label => "Address Line 1"
+            = f.input :address_2, :label => "Address Line 2"
+            = f.input :city, :label => "City"
+            = f.input :state, :label => "State"
+            = f.input :zip, :label => "Zip"
+      .form-actions
+        = f.button :submit, "Edit Box", :class => "btn-primary"
+        = link_to "Cancel", admins_boxes_path, :class => "btn"
