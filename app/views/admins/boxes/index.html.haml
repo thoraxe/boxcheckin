@@ -1,0 +1,24 @@
+.page-header
+  %h1 All Boxes
+  %p Below are all the currently existing boxes in the system
+.row
+  .span12
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th Address
+          %th Phone
+          %th Email
+          %th Actions
+      %tbody
+        - @boxes.each do |box|
+          %tr
+            %td= box.name
+            %td= render :partial => "address", :locals => { :box => box }
+            %td= box.phone
+            %td= box.email
+            %td
+              %p= link_to "Edit", edit_admins_box_path(box), :class => "btn btn-mini"
+              %p= link_to "Delete", admins_box_path(box), {:method => :delete, :class => "btn btn-mini btn-danger", :confirm => "Really delete #{box.name}?"}
+

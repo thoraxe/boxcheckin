@@ -1,6 +1,10 @@
 class Admins::BoxesController < ApplicationController
   before_filter :authenticate_admin!
 
+  def index
+    @boxes = Box.all
+  end
+
   def new
     @box = Box.new
   end
