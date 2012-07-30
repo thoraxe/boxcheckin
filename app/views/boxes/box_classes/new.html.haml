@@ -1,0 +1,23 @@
+%section#global
+  .page-header
+    %h1 Add New Class
+    %p Fill out the class's details below
+.row
+  .span12
+    = simple_form_for(@box_class, :as => :box_class, :url => boxes_box_classes_path, :method => :post, :html => {:class => "form-horizontal"}) do |f|
+      .form-inputs
+        .row
+          .span12
+            = f.input :start_time
+            = f.input :end_time
+            = f.input :monday
+            = f.input :tuesday
+            = f.input :wednesday
+            = f.input :thursday
+            = f.input :friday
+            = f.input :saturday
+            = f.input :sunday
+      .form-actions
+        = f.button :submit, "Add Class", :class => "btn-primary"
+        = link_to "Cancel", box_root_path, :class => "btn"
+

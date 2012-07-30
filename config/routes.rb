@@ -1,4 +1,9 @@
 Boxcheckin::Application.routes.draw do
+
+  namespace :boxes do
+    resources :box_classes
+  end
+  
   devise_for :boxes, :skip => [:registrations]
   as :box do
     get 'boxes/edit' => 'devise/registrations#edit', :as => 'edit_box_registration'

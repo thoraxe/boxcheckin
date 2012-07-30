@@ -1,0 +1,2 @@
+module Boxes::BoxClassesHelper
+end
