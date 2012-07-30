@@ -7,9 +7,10 @@
     = simple_form_for(@box_class, :as => :box_class, :url => boxes_box_classes_path, :method => :post, :html => {:class => "form-horizontal"}) do |f|
       .form-inputs
         .row
-          .span12
-            = f.input :start_time
-            = f.input :end_time
+          .span6.times
+            = f.input :start_time, :ampm => true
+            = f.input :end_time, :ampm => true
+          .span6.days
             = f.input :monday
             = f.input :tuesday
             = f.input :wednesday
