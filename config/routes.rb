@@ -3,6 +3,7 @@ Boxcheckin::Application.routes.draw do
   as :box do
     get 'boxes/edit' => 'devise/registrations#edit', :as => 'edit_box_registration'
     put 'boxes' => 'devise/registrations#update', :as => 'box_registration'
+    get 'boxes', :to => 'boxes#index', :as => :box_root
   end
 
   namespace :admins do
