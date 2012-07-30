@@ -7,17 +7,18 @@
     = simple_form_for(@box_class, :as => :box_class, :url => boxes_box_classes_path, :method => :post, :html => {:class => "form-horizontal"}) do |f|
       .form-inputs
         .row
-          .span6.times
+          .span7.times
             = f.input :start_time, :ampm => true
             = f.input :end_time, :ampm => true
-          .span6.days
-            = f.input :monday
-            = f.input :tuesday
-            = f.input :wednesday
-            = f.input :thursday
-            = f.input :friday
-            = f.input :saturday
-            = f.input :sunday
+          .span5.days
+            = f.input :day, :as => :select, :collection => BoxClass::DAYS
+            -#= f.input :monday
+            -#= f.input :tuesday
+            -#= f.input :wednesday
+            -#= f.input :thursday
+            -#= f.input :friday
+            -#= f.input :saturday
+            -#= f.input :sunday
       .form-actions
         = f.button :submit, "Add Class", :class => "btn-primary"
         = link_to "Cancel", box_root_path, :class => "btn"

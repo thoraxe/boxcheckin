@@ -34,13 +34,7 @@ ActiveRecord::Schema.define(:version => 20120730013941) do
     t.integer  "box_id"
     t.time     "start_time"
     t.time     "end_time"
-    t.boolean  "monday",     :default => false
-    t.boolean  "tuesday",    :default => false
-    t.boolean  "wednesday",  :default => false
-    t.boolean  "thursday",   :default => false
-    t.boolean  "friday",     :default => false
-    t.boolean  "saturday",   :default => false
-    t.boolean  "sunday",     :default => false
+    t.integer  "day"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

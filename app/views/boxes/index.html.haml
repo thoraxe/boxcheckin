@@ -6,22 +6,70 @@
       %thead
         %tr
           %th Class Time
-          %th Class Days
           %th Participants Today
           %th Participants Tomorrow
           %th Actions
       %tbody
-        - @box_classes.each do |box_class|
+        %tr
+          %td{:colspan => 4}
+            %h2 Monday
+        - @monday.each do |class_day|
           %tr
-            %td #{box_class.start_time.strftime("%I:%M%p")} - #{box_class.end_time.strftime("%I:%M%p")}
-            %td
-              %p.monday= "Mon" if box_class.days_hash[:monday]
-              %p.tuesday= "Tue" if box_class.days_hash[:tuesday]
-              %p.wednesday= "Wed" if box_class.days_hash[:wednesday]
-              %p.thursay= "Thu" if box_class.days_hash[:thursay]
-              %p.friday= "Fri" if box_class.days_hash[:friday]
-              %p.saturday= "Sat" if box_class.days_hash[:saturday]
-              %p.sunday= "Sun" if box_class.days_hash[:sunday]
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Tuesday
+        - @tuesday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Wednesday
+        - @wednesday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Thursday
+        - @thursday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Friday
+        - @friday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Saturday
+        - @saturday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
+            %td .
+            %td .
+            %td .
+        %tr
+          %td{:colspan => 4}
+            %h2 Sunday
+        - @sunday.each do |class_day|
+          %tr
+            %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
             %td .
