@@ -7,6 +7,7 @@ Boxcheckin::Application.routes.draw do
 
   namespace :admins do
     match 'index'
+    resources :boxes
   end
 
   devise_for :admins
