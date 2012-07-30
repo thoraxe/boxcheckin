@@ -18,7 +18,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Tuesday
@@ -27,7 +27,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Wednesday
@@ -36,7 +36,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Thursday
@@ -45,7 +45,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Friday
@@ -54,7 +54,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Saturday
@@ -63,7 +63,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
         %tr
           %td{:colspan => 4}
             %h2 Sunday
@@ -72,7 +72,7 @@
             %td #{class_day.start_time.strftime("%I:%M%p")}-#{class_day.end_time.strftime("%I:%M%p")}
             %td .
             %td .
-            %td .
+            %td= delete_class_link(class_day)
 .page-header
   %h1 Box Functions
 .row
