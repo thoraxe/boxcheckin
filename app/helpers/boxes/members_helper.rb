@@ -1,0 +1,2 @@
+module Boxes::MembersHelper
+end

@@ -1,7 +1,14 @@
 Boxcheckin::Application.routes.draw do
 
+  devise_for :members, :skip => [:registrations]
+  as :member do
+    get 'members/edit' => 'devise/registrations#edit', :as => 'edit_member_registration'
+    put 'members' => 'devise/registrations#update', :as => 'member_registration'
+    get 'members', :to => 'members#index', :as => :box_root
+  end
+
   namespace :boxes do
-    resources :box_classes
+    resources :box_classes, :members
   end
   
   devise_for :boxes, :skip => [:registrations]
