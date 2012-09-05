@@ -7,3 +7,18 @@
 .nav-collapse
   %ul.nav
     %li= link_to "Home", box_root_path
+    %li.dropdown
+      %a.dropdown-toggle(data-toggle="dropdown"){:href => "#"}
+        Classes
+        %b.caret
+      %ul.dropdown-menu
+        %li= link_to "List Classes", boxes_box_classes_path
+        %li= link_to "Add Class", new_boxes_box_class_path
+    %li.dropdown
+      %a.dropdown-toggle(data-toggle="dropdown"){:href => "#"}
+        Members
+        %b.caret
+      %ul.dropdown-menu
+        %li= link_to "List Members"
+        %li= link_to "Add Member"
+    %li= link_to "Checkins"
