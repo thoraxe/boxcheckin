@@ -6,9 +6,10 @@
   .span12
     = simple_form_for(@member, :as => :member, :url => boxes_members_path, :method => :post, :html => {:class => "form-horizontal"}) do |f|
       .form-inputs
-        .row
-          .span4
+        .row-fluid
+          .span6
             %h2 Member Contact Info
+            = f.input :email
             = f.input :name
             = f.input :address_1
             = f.input :address_2
@@ -16,11 +17,11 @@
             = f.input :state
             = f.input :zip
             = f.input :phone
-          .span4
+          .span6
             %h2 Member Emergency Info
             = f.input :emergency_contact
             = f.input :emergency_phone
         .row
-          .span12
+          .span6.offset6
             = f.button :submit, :class => "btn-primary"
             = link_to "Cancel", box_root_path, :class => "btn"

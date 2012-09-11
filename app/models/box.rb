@@ -10,4 +10,5 @@ class Box < ActiveRecord::Base
   attr_accessible :city, :name, :zip, :address_1, :address_2, :phone, :state
 
   has_many :box_classes
+  has_many :members
 end
