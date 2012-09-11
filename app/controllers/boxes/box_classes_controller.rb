@@ -20,7 +20,7 @@ class Boxes::BoxClassesController < ApplicationController
 
     if current_box.box_classes << @box_class
       flash[:success] = "Class added successfully."
-      redirect_to box_root_path
+      redirect_to boxes_box_classes_path
     else
       flash[:error] = "There was a problem with your submission."
       render :action => :new
@@ -38,7 +38,7 @@ class Boxes::BoxClassesController < ApplicationController
     else
       flash[:error] = "There was a problem deleting."
     end
-    redirect_to box_root_path
+    redirect_to boxes_box_classes_path
   end
 
 end
