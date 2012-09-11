@@ -7,6 +7,7 @@ gem 'devise', '2.1.2'
 
 gem 'simple_form', '2.0.2'
 gem 'twitter-bootstrap-rails', '2.1.1'
+gem 'awesome_print'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
