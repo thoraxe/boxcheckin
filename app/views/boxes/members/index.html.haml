@@ -1,0 +1,25 @@
+.page-header
+  %h1 Member List
+.row
+  .span12
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Member
+          %th Address
+          %th Emergency Contact
+          %th Actions
+      %tbody
+        - @members.each do |member|
+          %tr
+            %td.member
+              %p= member.name
+              %p= member.email
+              %p= member.phone
+            %td.address
+              %p= member.address_1
+              %p= member.address_2
+              %p #{member.city}, #{member.state} #{member.zip}
+            %td.emergency
+              %p= member.emergency_contact
+              %p= member.emergency_phone
