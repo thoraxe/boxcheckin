@@ -5,6 +5,8 @@ module ApplicationHelper
       render :partial => "shared/admin_navigation"
     elsif box_signed_in?
       render :partial => "shared/box_navigation"
+    elsif member_signed_in?
+      render :partial => "shared/member_navigation"
     else
       render :partial => "shared/login_navigation"
     end
