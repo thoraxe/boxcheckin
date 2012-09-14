@@ -2,11 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'haml', '3.1.3'
+gem 'will_paginate', '3.0.3'
 
 gem 'devise', '2.1.2'
 
 gem 'simple_form', '2.0.2'
 gem 'twitter-bootstrap-rails', '2.1.1'
+gem 'bootstrap-will_paginate', '0.0.8'
 gem 'awesome_print'
 
 # Bundle edge Rails instead:

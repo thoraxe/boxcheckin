@@ -33,8 +33,31 @@ end
                      :phone => "704-756-5887"
                 )
 
+# 0 is monday
+@classes = BoxClass.create([{
+    :start_time => "07:00:00",
+      :end_time => "08:00:00",
+           :day => 0
+}, {
+    :start_time => "07:00:00",
+      :end_time => "08:00:00",
+           :day => 2
+}, {
+    :start_time => "07:00:00",
+      :end_time => "08:00:00",
+           :day => 4
+}, {
+    :start_time => "08:00:00",
+      :end_time => "09:00:00",
+           :day => 1
+}, {
+    :start_time => "15:00:00",
+      :end_time => "16:00:00",
+           :day => 3
+}])
+x = 0
 @members = Member.create([{
-                         :email => "erik+robsouza@jumpshipservices.co",
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
                          :password => "boxcheckin",
                          :password_confirmation => "boxcheckin",
                           :name => "Robert B. Souza",
@@ -46,7 +69,7 @@ end
              :emergency_contact => "Robert B. Souza",
                :emergency_phone => "580-509-7329"
 }, {
-                         :email => "erik+leslieprom@jumpshipservices.co",
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
                          :password => "boxcheckin",
                          :password_confirmation => "boxcheckin",
                           :name => "Leslie J. Prom",
@@ -57,5 +80,66 @@ end
                          :phone => "573-695-3054",
              :emergency_contact => "Leslie J. Prom",
                :emergency_phone => "573-695-3054"
+}, {
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
+                         :password => "boxcheckin",
+                         :password_confirmation => "boxcheckin",
+                          :name => "Franklin E. Hsu",
+                     :address_1 => "3431 Longview Avenue",
+                          :city => "Jamaica",
+                         :state => "NY",
+                           :zip => "11432",
+                         :phone => "718-558-3775",
+             :emergency_contact => "Franklin E. Hsu",
+               :emergency_phone => "718-558-3775"
+}, {
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
+                         :password => "boxcheckin",
+                         :password_confirmation => "boxcheckin",
+                          :name => "Kevin D. Chafin",
+                     :address_1 => "1366 Tyler Avenue",
+                          :city => "Marathon",
+                         :state => "FL",
+                           :zip => "33050",
+                         :phone => "718-558-3775",
+             :emergency_contact => "Franklin E. Hsu",
+               :emergency_phone => "718-558-3775"
+}, {
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
+                         :password => "boxcheckin",
+                         :password_confirmation => "boxcheckin",
+                          :name => "Jamie T. Ventura",
+                     :address_1 => "399 George Avenue",
+                          :city => "Mobile",
+                         :state => "AL",
+                           :zip => "36610",
+                         :phone => "718-558-3775",
+             :emergency_contact => "Franklin E. Hsu",
+               :emergency_phone => "718-558-3775"
+}, {
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
+                         :password => "boxcheckin",
+                         :password_confirmation => "boxcheckin",
+                          :name => "Ryan J. Waterman",
+                     :address_1 => "1793 Meadow View Drive",
+                          :city => "Wethersfield",
+                         :state => "CT",
+                           :zip => "06109",
+                         :phone => "718-558-3775",
+             :emergency_contact => "Franklin E. Hsu",
+               :emergency_phone => "718-558-3775"
+}, {
+                         :email => "erik+#{x+=1}@jumpshipservices.co",
+                         :password => "boxcheckin",
+                         :password_confirmation => "boxcheckin",
+                          :name => "Kathleen P. Katzer",
+                     :address_1 => "636 Hillhaven Drive",
+                          :city => "Los Angeles",
+                         :state => "CA",
+                           :zip => "90033",
+                         :phone => "718-558-3775",
+             :emergency_contact => "Franklin E. Hsu",
+               :emergency_phone => "718-558-3775"
 }])
 @box.members << @members
+@box.box_classes << @classes

@@ -2,7 +2,7 @@ class Boxes::MembersController < ApplicationController
   before_filter :authenticate_box!
 
   def index
-    @members = current_box.members
+    @members = Member.paginate(:conditions => {:box_id => current_box.id}, :page => params[:page], :per_page => 6)
   end
 
   def new
