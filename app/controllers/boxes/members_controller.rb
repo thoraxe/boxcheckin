@@ -27,4 +27,23 @@ class Boxes::MembersController < ApplicationController
     end
   end
 
+  def destroy
+    # find the member
+    @member = Member.find(params[:id])
+
+    # check if the member belongs to the current administrator
+    if @member.box_id == current_box.id
+      # destroy
+      if @member.destroy
+        flash[:success] = "Member deleted successfully."
+      else
+        flash[:error] = "Couldn't delete."
+      end
+      redirect_to boxes_members_path
+    else
+      # not their member to delete. redirect silently
+      redirect_to box_root_path
+    end
+  end
+
 end
