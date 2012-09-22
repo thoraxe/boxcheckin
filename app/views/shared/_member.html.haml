@@ -1,0 +1,19 @@
+.form-inputs
+  .row-fluid
+    .span6
+      %h2 Member Contact Info
+      = f.input :email
+      = f.input :name
+      = f.input :address_1
+      = f.input :address_2
+      = f.input :city
+      = f.input :state
+      = f.input :zip
+      = f.input :phone
+    .span6
+      %h2 Member Emergency Info
+      = f.input :emergency_contact
+      = f.input :emergency_phone
+      %h2 Password
+      = f.input :password
+      = f.input :password_confirmation

@@ -25,4 +25,5 @@
               %p= member.emergency_contact
               %p= member.emergency_phone
             %td.actions
-              = link_to "Delete", boxes_member_path(member.id) , {:class => "btn btn-danger", :method => :delete, :confirm => "Really delete #{member.name}?"}
+              %p= link_to "Edit", edit_boxes_member_path(member.id), {:class => "btn"}
+              %p= link_to "Delete", boxes_member_path(member.id) , {:class => "btn btn-danger", :method => :delete, :confirm => "Really delete #{member.name}?"}

@@ -1,10 +1,10 @@
-%section#boxes-members-new
+%section#boxes-members-edit
   .page-header
-    %h1 Add New Member
+    %h1 Edit #{@member.name}
     %p Fill out the members' details below
-.row
+.row-fluid
   .span12
-    = simple_form_for(@member, :as => :member, :url => boxes_members_path, :method => :post, :html => {:class => "form-horizontal"}) do |f|
+    = simple_form_for(@member, :as => :member, :url => boxes_member_path, :method => :put, :html => {:class => "form-horizontal"}) do |f|
       = render :partial => "shared/member", :locals => { :f => f }
       .row-fluid
         .span6.offset6

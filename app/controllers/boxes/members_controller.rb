@@ -20,10 +20,26 @@ class Boxes::MembersController < ApplicationController
 
     if current_box.members << @member
       flash[:success] = "Member added successfully."
-      redirect_to box_root_path
+      redirect_to boxes_members_path
     else
       flash[:error] = "Couldn't add member."
       render :action => :new
+    end
+  end
+
+  def edit
+    @member = Member.find(params[:id])
+  end
+
+  def update
+    @member = Member.find(params[:id])
+    @member.update_attributes(params[:member])
+    if @member.save
+      flash[:success] = "Member updated successfully!"
+      redirect_to boxes_members_path
+    else
+      flash[:error] = "There was a problem with your submission."
+      render :action => :edit
     end
   end
 
