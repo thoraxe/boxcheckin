@@ -10,4 +10,5 @@ class Member < ActiveRecord::Base
   attr_accessible :city, :name, :zip, :address_1, :address_2, :phone, :state, :emergency_contact, :emergency_phone
 
   belongs_to :box
+  has_many :check_ins
 end

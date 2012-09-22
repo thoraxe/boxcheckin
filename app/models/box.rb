@@ -11,4 +11,5 @@ class Box < ActiveRecord::Base
 
   has_many :box_classes, :dependent => :destroy
   has_many :members, :dependent => :destroy
+  has_many :check_ins, :dependent => :destroy
 end

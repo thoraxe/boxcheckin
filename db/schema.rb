@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730175350) do
+ActiveRecord::Schema.define(:version => 20120922213728) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(:version => 20120730175350) do
 
   add_index "boxes", ["email"], :name => "index_boxes_on_email", :unique => true
   add_index "boxes", ["reset_password_token"], :name => "index_boxes_on_reset_password_token", :unique => true
+
+  create_table "check_ins", :force => true do |t|
+    t.integer  "box_id"
+    t.integer  "box_class_id"
+    t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "members", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
