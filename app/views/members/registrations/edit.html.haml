@@ -1,0 +1,14 @@
+%section#members-registrations-edit
+  .page-header
+    %h1 Hi #{@member.name}!
+    %p Please fill out your details below
+.row-fluid
+  .span12
+    = simple_form_for(@member, :as => :member, :url => member_registration_path, :method => :put, :html => {:class => "form-horizontal"}) do |f|
+      = render :partial => "shared/member", :locals => { :f => f }
+      .row-fluid
+        .span6.offset6
+          %hr
+          = f.input :current_password, :hint => "We need your current password to confirm your changes"
+          = f.button :submit, "Submit Changes", :class => "btn-primary"
+          = link_to "Cancel", box_root_path, :class => "btn"
