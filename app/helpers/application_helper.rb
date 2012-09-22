@@ -12,4 +12,11 @@ module ApplicationHelper
     end
   end
 
+  def today_full_day
+    Date.today.strftime("%A")
+  end
+
+  def class_time_printer(box_class)
+    "#{box_class.start_time.strftime("%I:%M%p")}" + "#{box_class.start_time.strftime("%I:%M%p")}"
+  end
 end

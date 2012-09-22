@@ -2,6 +2,7 @@ class Boxes::BoxClassesController < ApplicationController
   before_filter :authenticate_box!
 
   def index
+    # TODO: this doesn't order properly
     @monday = BoxClass.monday(current_box.id)
     @tuesday = BoxClass.tuesday(current_box.id)
     @wednesday = BoxClass.wednesday(current_box.id)

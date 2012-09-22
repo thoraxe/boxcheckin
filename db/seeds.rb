@@ -37,23 +37,23 @@ end
 @classes = BoxClass.create([{
     :start_time => "07:00:00",
       :end_time => "08:00:00",
-           :day => 0
+           :day => 1
 }, {
     :start_time => "07:00:00",
       :end_time => "08:00:00",
-           :day => 2
+           :day => 3
 }, {
     :start_time => "07:00:00",
       :end_time => "08:00:00",
-           :day => 4
+           :day => 5
 }, {
     :start_time => "08:00:00",
       :end_time => "09:00:00",
-           :day => 1
+           :day => 2
 }, {
     :start_time => "15:00:00",
       :end_time => "16:00:00",
-           :day => 3
+           :day => 4
 }])
 x = 0
 @members = Member.create([{

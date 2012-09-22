@@ -7,6 +7,10 @@ Boxcheckin::Application.routes.draw do
     get 'members', :to => 'members#index', :as => :member_root
   end
 
+  namespace :members do
+    resources :check_ins
+  end
+
   namespace :boxes do
     resources :box_classes, :members
   end
