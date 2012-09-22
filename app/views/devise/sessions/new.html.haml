@@ -1,7 +1,6 @@
 %section#global
   .page-header
-    %h1 Box Log In
-    %p If you are a Box administrator, log in below.
+    %h1 #{resource.class.name.titleize} Log In
 .row
   .span12
     = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
@@ -11,4 +10,5 @@
         = f.input :remember_me, :as => :boolean if devise_mapping.rememberable? 
       .form-actions
         = f.button :submit, "Sign in"
-    = render "devise/shared/links"
+        = render "devise/shared/links"
+        = link_to "Cancel", root_path, :class => "btn"
