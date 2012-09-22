@@ -1,5 +1,6 @@
 class BoxClass < ActiveRecord::Base
   belongs_to :box
+  has_many :check_ins
 
   DAYS = [["Mon",0],["Tue",1],["Wed",2],["Thu",3],["Fri",4],["Sat",5],["Sun",6]]
 
