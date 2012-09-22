@@ -1,0 +1,23 @@
+.form-inputs
+  .row-fluid
+    .span6
+      .row-fluid
+        .span6
+          %h2 Details
+          = f.input :name
+          = f.input :email
+          = f.input :phone, :label => "Phone"
+      .row-fluid
+        .span6
+          %h2 Password
+          = f.input :password
+          = f.input :password_confirmation
+    .span6
+      .row-fluid
+        .span6
+          %h2 Location
+          = f.input :address_1, :label => "Address Line 1"
+          = f.input :address_2, :label => "Address Line 2"
+          = f.input :city, :label => "City"
+          = f.input :state, :label => "State"
+          = f.input :zip, :label => "Zip"
